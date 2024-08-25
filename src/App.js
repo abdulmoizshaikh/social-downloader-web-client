@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, TextField, CircularProgress, Typography, Container, Box, Link } from '@mui/material';
-import './App.css';
 
 function App() {
   const [url, setUrl] = useState('');
@@ -26,13 +25,13 @@ function App() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage({ text: data.message, type: 'success' });
+        setMessage('Download successful!');
         setFile(data.file);
       } else {
-        setMessage({ text: data, type: 'error' });
+        setMessage('Failed to download video.');
       }
     } catch (err) {
-      setMessage({ text: 'Error downloading video.', type: 'error' });
+      setMessage('Error downloading video.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -41,11 +40,11 @@ function App() {
 
   return (
     <Container maxWidth="sm" sx={{ marginTop: 5 }}>
-      <Box 
+      <Box
         sx={{
-          display: 'flex', 
-          flexDirection: 'column', 
-          alignItems: 'center', 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
           textAlign: 'center',
           padding: 3,
           background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
@@ -70,11 +69,11 @@ function App() {
               borderRadius: '5px',
             }}
           />
-          <Button 
+          <Button
             type="submit"
-            variant="contained" 
-            color="primary" 
-            fullWidth 
+            variant="contained"
+            color="primary"
+            fullWidth
             sx={{ fontWeight: 'bold', padding: 1.5 }}
             disabled={loading}
           >
@@ -82,21 +81,21 @@ function App() {
           </Button>
         </form>
         {message && (
-          <Typography 
-            variant="body1" 
+          <Typography
+            variant="body1"
             sx={{
-              color: message.type === 'success' ? '#4caf50' : '#f44336',
+              color: '#f44336',
               fontWeight: 500,
               marginBottom: 2,
             }}
           >
-            {message.text}
+            {message}
           </Typography>
         )}
         {file && (
-          <Link 
-            href={`http://localhost:5000/youtube/${file}`} 
-            download 
+          <Link
+            href={`http://localhost:5000/youtube/${file}`}
+            download
             sx={{ textDecoration: 'none', color: '#2196f3', fontWeight: 500 }}
           >
             Download {file}
