@@ -1,90 +1,12 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px;
-  /* background-color: #f4f4f4; */
-  /* min-height: 100vh; */
+  background-color: #f4f4f4;
   /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-h1 {
-  color: #333;
-}
-
-label {
-  font-size: 18px;
-  margin: 10px 0;
-  display: block;
-}
-
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0px 0px 4px;
-  width: 100%;
-  max-width: 500px;
-}
-
-input:focus {
-  /* border-color: #007bff;
-  outline: none;  */
-  /* background-color: var(--bs-body-bg); */
-  border-color: #86b7fe;
-  box-shadow: 0 0 0 0.25rem #0d6efd40;
-  color: var(--bs-body-color);
-  outline: 0;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-  border: none;
-  border-radius: 0px 4px 4px 0px;
-  cursor: pointer;
-  margin-top: 10px;
-  /* width: 100%; */
-  max-width: 500px;
-}
-
-button:hover {
-  /* background-color: #0056b3; */
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
-}
-
-.video-info {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  display: inline-block;
-  text-align: left;
-  width: 100%; /* Match width to container */
-  max-width: 600px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.video-info h2 {
-  color: #333;
-}
-
-.video-info p {
-  margin: 5px 0;
 }
