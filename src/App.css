@@ -1,9 +1,20 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px;
   background-color: #f4f4f4;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 
 h1 {
@@ -21,8 +32,8 @@ input {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 80%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 500px; /* Ensure input does not exceed max-width */
 }
 
 button {
@@ -34,6 +45,8 @@ button {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  /* width: 100%; */
+  max-width: 500px; 
 }
 
 button:hover {
@@ -48,7 +61,8 @@ button:hover {
   border-radius: 8px;
   display: inline-block;
   text-align: left;
-  max-width: 500px;
+  width: 100%; /* Match width to container */
+  max-width: 500px; /* Ensure video-info box does not exceed max-width */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
