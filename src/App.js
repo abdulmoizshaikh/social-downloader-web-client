@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ytdl from 'ytdl-core';
 
 function App() {
   const [url, setUrl] = useState('');
@@ -7,7 +6,8 @@ function App() {
 
   const getVideoInfo = async () => {
     try {
-      const info = await ytdl.getInfo(url);
+      const response = await fetch(`https://www.youtube.com/oembed?url=${url}&format=json`);
+      const info = await response.json();
       setVideoInfo(info);
     } catch (error) {
       console.error('Error fetching video info:', error.message);
@@ -15,18 +15,8 @@ function App() {
   };
 
   const downloadVideo = () => {
-    if (videoInfo) {
-      // Using ytdl-core to get the video stream
-      const videoStream = ytdl(url, { quality: 'highest' });
-
-      // Create a temporary link to trigger the download
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(new Blob([videoStream], { type: 'video/mp4' }));
-      link.download = `${videoInfo.videoDetails.title}.mp4`; // Set the desired filename
-      link.click();
-
-      // Clean up
-      URL.revokeObjectURL(link.href);
+    if (url) {
+      window.open(`http://localhost:5000/download?url=${encodeURIComponent(url)}`);
     }
   };
 
@@ -46,9 +36,9 @@ function App() {
       {videoInfo && (
         <div>
           <h2>Video Information</h2>
-          <p>Title: {videoInfo.videoDetails.title}</p>
-          <p>Author: {videoInfo.videoDetails.author.name}</p>
-          <p>Duration: {videoInfo.videoDetails.lengthSeconds} seconds</p>
+          <p>Title: {videoInfo.title}</p>
+          <p>Author: {videoInfo.author_name}</p>
+          <p>Duration: {videoInfo.duration} seconds</p>
           <button onClick={downloadVideo}>Download Video</button>
         </div>
       )}
