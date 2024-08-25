@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [url, setUrl] = useState('');
@@ -34,11 +35,11 @@ function App() {
       <button onClick={getVideoInfo}>Get Video Info</button>
 
       {videoInfo && (
-        <div>
+        <div className="video-info">
           <h2>Video Information</h2>
-          <p>Title: {videoInfo.title}</p>
-          <p>Author: {videoInfo.author_name}</p>
-          <p>Duration: {videoInfo.duration} seconds</p>
+          <p><strong>Title:</strong> {videoInfo.title}</p>
+          <p><strong>Author:</strong> {videoInfo.author_name}</p>
+          <p><strong>Duration:</strong> {videoInfo.duration} seconds</p>
           <button onClick={downloadVideo}>Download Video</button>
         </div>
       )}
