@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -9,12 +10,13 @@ body, html {
   text-align: center;
   margin: 0;
   padding: 20px;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   /* min-height: 100vh; */
   /* display: flex; */
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -36,21 +38,34 @@ input {
   max-width: 500px;
 }
 
+input:focus {
+  /* border-color: #007bff;
+  outline: none;  */
+  /* background-color: var(--bs-body-bg); */
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem #0d6efd40;
+  color: var(--bs-body-color);
+  outline: 0;
+}
+
 button {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
   border: none;
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
   margin-top: 10px;
   /* width: 100%; */
-  max-width: 500px; 
+  max-width: 500px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
 }
 
 .video-info {
