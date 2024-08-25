@@ -28,15 +28,13 @@ function App() {
   return (
     <div className="App">
       <h1>YouTube Video Downloader</h1>
-      <div className="input-container">
-        <input
-          placeholder="Enter YouTube Video URL"
-          type="text"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-        />
-        <button onClick={getVideoInfo}>Download</button>
-      </div>
+      <input
+        placeholder="Enter YouTube Video URL"
+        type="text"
+        value={url}
+        onChange={(e) => setUrl(e.target.value)}
+      />
+      <button onClick={getVideoInfo}>Download</button>
 
       {videoInfo && (
         <div className="video-info">

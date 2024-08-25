@@ -31,9 +31,9 @@ input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 4px 0px 0px 4px;
   width: 100%;
-  max-width: 500px; /* Ensure input does not exceed max-width */
+  max-width: 500px;
 }
 
 button {
@@ -42,7 +42,7 @@ button {
   color: #fff;
   background-color: #007bff;
   border: none;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   cursor: pointer;
   margin-top: 10px;
   /* width: 100%; */
