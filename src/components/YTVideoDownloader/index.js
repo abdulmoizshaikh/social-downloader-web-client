@@ -43,6 +43,8 @@ const YTVideoDownloader = () => {
     window.open(
       `http://localhost:5000/download?url=${encodeURIComponent(url)}`
     );
+    // setUrl('');
+    // setVideoInfo(null);
   };
 
   const handleKeyDown = (event) => {
