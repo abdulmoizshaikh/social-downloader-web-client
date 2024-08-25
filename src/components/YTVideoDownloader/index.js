@@ -2,18 +2,22 @@
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './index.css';
+import './index.css'; // Make sure this CSS file includes styles for the spinner
 
 const YTVideoDownloader = () => {
   const [url, setUrl] = useState('');
   const [videoInfo, setVideoInfo] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const getVideoInfo = async () => {
     if (!url) {
       toast.error('Please enter a valid YouTube URL.');
       return;
     }
-    
+
+    setLoading(true);
+    setVideoInfo(null);
+
     try {
       const response = await fetch(
         `https://www.youtube.com/oembed?url=${url}&format=json`
@@ -26,6 +30,8 @@ const YTVideoDownloader = () => {
     } catch (error) {
       console.error('Error fetching video info:', error.message);
       toast.error('Error fetching video info. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,7 +64,11 @@ const YTVideoDownloader = () => {
         <button onClick={getVideoInfo}>Get Video Info</button>
       </div>
 
-      {videoInfo && (
+      <div className="spinner-container">
+        {loading && <div className="spinner"></div>}
+      </div>
+
+      {!loading && videoInfo && (
         <div className="video-info">
           <h2>Video Information</h2>
           <p>
