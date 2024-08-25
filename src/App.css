@@ -1,76 +1,12 @@
 .App {
-  text-align: center;
-  margin-top: 50px;
   font-family: Arial, sans-serif;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 0;
   padding: 20px;
-}
-
-.App input {
-  padding: 10px;
-  font-size: 16px;
-  margin-right: 10px;
-  width: 300px;
-  border: 2px solid #61dafb;
-  border-radius: 5px;
-  outline: none;
-}
-
-.App input:focus {
-  border-color: #21a1f1;
-}
-
-.App button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #61dafb;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.App button:hover {
-  background-color: #21a1f1;
-}
-
-.App button:disabled {
-  background-color: #a1a1a1;
-  cursor: not-allowed;
-}
-
-.App-link {
-  color: #61dafb;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.App-link:hover {
-  color: #21a1f1;
-}
-
-p {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  background-color: #f4f4f4;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
