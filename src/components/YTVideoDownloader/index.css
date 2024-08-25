@@ -38,8 +38,10 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  /* background-color: #0d6efd;
+  border-color: #0d6efd; */
+  background-color: #f80701;
+  border-color: #f80701;
   border: none;
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
@@ -50,8 +52,11 @@ button {
 
 button:hover {
   /* background-color: #0056b3; */
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  /* background-color: #0b5ed7;
+  border-color: #0a58ca; */
+  /* red */
+  background-color: #c70500; /* Darker shade on hover */
+  border-color: #c70500;
 }
 
 .video-info {
@@ -63,7 +68,7 @@ button:hover {
   display: inline-block;
   text-align: left;
   width: 100%; /* Match width to container */
-  max-width: 600px; 
+  max-width: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,12 +100,12 @@ button:hover {
 /* index.css */
 .spinner-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1); /* Light grey */
-  border-left: 4px solid #3498db; /* Blue */
+  border-left: 4px solid #f80701; /* Blue */
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -109,7 +114,10 @@ button:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-

@@ -64,9 +64,11 @@ const YTVideoDownloader = () => {
         <button onClick={getVideoInfo}>Get Video Info</button>
       </div>
 
-      <div className="spinner-container">
-        {loading && <div className="spinner"></div>}
-      </div>
+      {loading && (
+        <div className="spinner-container">
+          <div className="spinner"></div>
+        </div>
+      )}
 
       {!loading && videoInfo && (
         <div className="video-info">
