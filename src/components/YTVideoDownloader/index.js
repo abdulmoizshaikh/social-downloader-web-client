@@ -40,9 +40,10 @@ const YTVideoDownloader = () => {
       toast.error('Please enter a valid YouTube URL.');
       return;
     }
-    window.open(
-      `http://localhost:5000/download?url=${encodeURIComponent(url)}`
-    );
+
+    const BASE_URL = process.env.REACT_APP_API_URL | 'http://localhost:5000';
+
+    window.open(`${BASE_URL}/download?url=${encodeURIComponent(url)}`);
     // setUrl('');
     // setVideoInfo(null);
   };
