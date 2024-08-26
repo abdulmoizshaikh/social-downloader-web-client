@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/social-downloader-web-client/static/css/main.15dd48b5.css",
-    "main.js": "/social-downloader-web-client/static/js/main.bed9c153.js",
+    "main.js": "/social-downloader-web-client/static/js/main.ecb972d7.js",
     "static/js/453.9d8c4e59.chunk.js": "/social-downloader-web-client/static/js/453.9d8c4e59.chunk.js",
     "index.html": "/social-downloader-web-client/index.html",
     "main.15dd48b5.css.map": "/social-downloader-web-client/static/css/main.15dd48b5.css.map",
-    "main.bed9c153.js.map": "/social-downloader-web-client/static/js/main.bed9c153.js.map",
+    "main.ecb972d7.js.map": "/social-downloader-web-client/static/js/main.ecb972d7.js.map",
     "453.9d8c4e59.chunk.js.map": "/social-downloader-web-client/static/js/453.9d8c4e59.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15dd48b5.css",
-    "static/js/main.bed9c153.js"
+    "static/js/main.ecb972d7.js"
   ]
 }
