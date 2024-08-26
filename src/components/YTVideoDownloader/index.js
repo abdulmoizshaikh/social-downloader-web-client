@@ -63,7 +63,8 @@ const YTVideoDownloader = () => {
           onChange={(e) => setUrl(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={getVideoInfo}>Get Video Info</button>
+        {/* <button onClick={getVideoInfo}>Get Video Info</button> */}
+        <button onClick={downloadVideo}>Download</button>
       </div>
 
       {loading && (
