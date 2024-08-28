@@ -1,4 +1,4 @@
-## Repository Url: https://github.com/abdulmoizshaikh/social-downloader-backend
+## Repository Url: https://github.com/abdulmoizshaikh/social-downloader-web-client
 
 # Guide:
 
