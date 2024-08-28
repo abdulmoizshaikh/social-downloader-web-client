@@ -3,60 +3,44 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f3f2ef; /* LinkedIn background */
 }
 
-h1 {
-  color: #333;
-}
-
-label {
-  font-size: 18px;
-  margin: 10px 0;
-  display: block;
+.linkedin-downloader {
+  text-align: center;
+  padding: 20px;
 }
 
 input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
   width: 100%;
   max-width: 500px;
 }
 
 input:focus {
-  /* border-color: #007bff;
-  outline: none;  */
-  /* background-color: var(--bs-body-bg); */
-  border-color: #86b7fe;
-  box-shadow: 0 0 0 0.25rem #0d6efd40;
-  color: var(--bs-body-color);
-  outline: 0;
+  border-color: #0a66c2; /* LinkedIn blue */
+  box-shadow: 0 0 0 0.25rem rgba(14, 118, 168, 0.25);
+  outline: none;
 }
 
-.youtube-button {
+.linkedin-button {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  /* background-color: #0d6efd;
-  border-color: #0d6efd; */
-  background-color: #f80701;
-  border-color: #f80701;
+  background-color: #0a66c2; /* LinkedIn blue */
   border: none;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   margin-top: 10px;
-  /* width: 100%; */
   max-width: 500px;
 }
 
-.youtube-button:hover {
-  /* background-color: #0056b3; */
-  /* background-color: #0b5ed7;
-  border-color: #0a58ca; */
-  /* red */
-  background-color: #c70500; /* Darker shade on hover */
-  border-color: #c70500;
+.linkedin-button:hover {
+  background-color: #084c8d; /* Darker LinkedIn blue */
 }
 
 .video-info {
@@ -67,7 +51,7 @@ input:focus {
   border-radius: 8px;
   display: inline-block;
   text-align: left;
-  width: 100%; /* Match width to container */
+  width: 100%;
   max-width: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -80,10 +64,7 @@ input:focus {
   margin: 5px 0;
 }
 
-/* toast */
-/* App.css or a dedicated toast CSS file */
 .Toastify__toast-container {
-  /* Optional: adjust position if needed */
   position: absolute;
   top: 20px;
   right: 20px;
@@ -95,17 +76,14 @@ input:focus {
   text-overflow: ellipsis;
 }
 
-/* styles for spinner */
-
-/* index.css */
 .spinner-container {
   text-align: center;
   margin-top: 80px;
 }
 
 .spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1); /* Light grey */
-  border-left: 4px solid #f80701; /* Blue */
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #0a66c2;
   border-radius: 50%;
   width: 40px;
   height: 40px;
