@@ -45,6 +45,8 @@ const LinkedInVideoDownloader = () => {
     const LI_DOWNLOAD = 'linkedin-download-direct';
     const API_URL = `${BASE_URL}/${LI_DOWNLOAD}?url=${encodeURIComponent(url)}`;
     window.open(API_URL);
+    // setUrl('');
+    // setVideoInfo(null);
   };
 
   const handleKeyDown = (event) => {
