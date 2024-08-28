@@ -4,9 +4,26 @@
   margin: 0;
   padding: 20px;
   background-color: #f4f4f4;
-  /* display: flex; */
-  flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Adjust width as needed */
+}
+
+.video-downloader {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.divider {
+  background-color: #ddd; /* Color of the vertical line */
+  width: 1px;
+  height: 100%; /* Full height of the container */
 }
