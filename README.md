@@ -1,10 +1,16 @@
-## Repository Url: 
+## Repository Url:
 
 https://github.com/abdulmoizshaikh/social-downloader-web-client
 
-## Live URL
+# Live URLs
 
-https://abdulmoizshaikh.github.io/social-downloader-web-client/
+## BE
+
+### [Visit -> Social-downloader-Node-App](https://social-downloader-node-cg1oasa4k.vercel.app/)
+
+## FE
+
+### [Visit -> YouTube Video Downloader](https://abdulmoizshaikh.github.io/social-downloader-web-client/)
 
 # Guide:
 
@@ -63,7 +69,6 @@ Deploying your React app to GitHub Pages is straightforward. Here’s a step-by-
 2. **Check your deployment**:
    After running the deploy script, your app should be available at the URL specified in the `homepage` field of your `package.json`.
 
-
 ---
 
 ## References.
@@ -71,6 +76,5 @@ Deploying your React app to GitHub Pages is straightforward. Here’s a step-by-
 Tried these but these won't work on FE (eventually I had to setup backend server becasue videos weren't downloading from FE directly its voilating youtube T&CS and its blocking)
 
 ### Building a YouTube Video Downloader with React.js with TechLearn India
+
 https://blog.techlearnindia.com/building-a-youtube-video-downloader-with-reactjs-with-techlearn-india
-
-
