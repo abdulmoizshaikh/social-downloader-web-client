@@ -41,9 +41,11 @@ const YTVideoDownloader = () => {
       return;
     }
 
-    const BASE_URL = process.env.REACT_APP_API_URL | 'http://localhost:5000';
-
-    window.open(`${BASE_URL}/download?url=${encodeURIComponent(url)}`);
+    const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const YT_DOWNLOAD = 'yt-download';
+    const API_URL = `${BASE_URL}/${YT_DOWNLOAD}?url=${encodeURIComponent(url)}`;
+    // console.log('API_URL', API_URL);
+    window.open(API_URL);
     // setUrl('');
     // setVideoInfo(null);
   };
