@@ -1,17 +1,16 @@
-// src/YTVideoDownloader.js
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './index.css'; // Make sure this CSS file includes styles for the spinner
+import './index.css'; // Ensure this CSS file includes updated LinkedIn styles
 
-const YTVideoDownloader = () => {
+const LinkedInVideoDownloader = () => {
   const [url, setUrl] = useState('');
   const [videoInfo, setVideoInfo] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const getVideoInfo = async () => {
     if (!url) {
-      toast.error('Please enter a valid YouTube URL.');
+      toast.error('Please enter a valid LinkedIn Video URL.');
       return;
     }
 
@@ -19,8 +18,9 @@ const YTVideoDownloader = () => {
     setVideoInfo(null);
 
     try {
+      // Fetch LinkedIn video details (placeholder logic)
       const response = await fetch(
-        `https://www.youtube.com/oembed?url=${url}&format=json`
+        `https://www.linkedin.com/video-fetch?url=${url}`
       );
       if (!response.ok) {
         throw new Error('Failed to fetch video info.');
@@ -37,14 +37,13 @@ const YTVideoDownloader = () => {
 
   const downloadVideo = () => {
     if (!url) {
-      toast.error('Please enter a valid YouTube URL.');
+      toast.error('Please enter a valid LinkedIn Video URL.');
       return;
     }
 
     const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-    const YT_DOWNLOAD = 'yt-download';
-    const API_URL = `${BASE_URL}/${YT_DOWNLOAD}?url=${encodeURIComponent(url)}`;
-    // console.log('API_URL', API_URL);
+    const LI_DOWNLOAD = 'linkedin-download-direct';
+    const API_URL = `${BASE_URL}/${LI_DOWNLOAD}?url=${encodeURIComponent(url)}`;
     window.open(API_URL);
     // setUrl('');
     // setVideoInfo(null);
@@ -57,19 +56,16 @@ const YTVideoDownloader = () => {
   };
 
   return (
-    <div className="youtube-downloader">
+    <div className="linkedin-downloader">
       <div>
         <input
-          placeholder="Enter YouTube Video URL"
+          placeholder="Enter LinkedIn Video URL"
           type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        {/* <button onClick={getVideoInfo}>Get Video Info</button> */}
-        <button className="youtube-button" onClick={downloadVideo}>
-          Download
-        </button>
+        <button className='linkedin-button' onClick={downloadVideo}>Download</button>
       </div>
 
       {loading && (
@@ -87,12 +83,7 @@ const YTVideoDownloader = () => {
           <p>
             <strong>Author:</strong> {videoInfo.author_name}
           </p>
-          <p>
-            <strong>Duration:</strong> {videoInfo.duration} seconds
-          </p>
-          <button className="youtube-button" onClick={downloadVideo}>
-            Download Video
-          </button>
+          <button className='linkedin-button' onClick={downloadVideo}>Download Video</button>
         </div>
       )}
 
@@ -101,4 +92,4 @@ const YTVideoDownloader = () => {
   );
 };
 
-export default YTVideoDownloader;
+export default LinkedInVideoDownloader;

@@ -1,13 +1,23 @@
-// src/App.js
 import React from 'react';
 import './App.css';
-import { YTVideoDownloader } from './components';
+import { LinkedInVideoDownloader, YTVideoDownloader } from './components';
 
 function App() {
   return (
     <div className="App">
-      <h1>YouTube Video Downloader</h1>
-      <YTVideoDownloader />
+      <div className="container">
+        <div className="video-downloader">
+          <h1>YouTube Video Downloader</h1>
+          <YTVideoDownloader />
+        </div>
+
+        <div className="divider"></div>
+
+        <div className="video-downloader">
+          <h1>LinkedIn Video Downloader</h1>
+          <LinkedInVideoDownloader />
+        </div>
+      </div>
     </div>
   );
 }
